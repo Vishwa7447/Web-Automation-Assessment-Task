@@ -1,9 +1,10 @@
 
 *** Settings ***
 Library    	SeleniumLibrary
-Resource	../Downloads/Keywords.resource
-*** Variables ***
+Resource	../Downloads/Keywords.resource  #This path can changed as per your local machine based on the path where keywords file located
 
+*** Variables ***
+#Note :- This variable of xpaths an also be written in separate file like I created separate file for keywords. When we have large code then we should prefer separate files for variable/Xapthas and for keywords
 ${URL}				https://www.snapdeal.com/
 ${SearchIconLocator}		//input[@placeholder="Search products & brands"]
 ${SearchButtonClickLocator}	//button[@onclick="submitSearchForm('go_header');"]
@@ -25,7 +26,7 @@ ${DeletecartLocator}			//input[@value="Delete"]
 
 Search for a non-existing product
     	[Documentation]    This test case verifies that a user can search for a non-existing product.
-	[Tags]	TC_01    CommonTag
+	[Tags]	TC_01    CommonTag	# We can use unique tag to run individual testcase from a suite and also can run set of testcases using common tag aswell.
     	Open Browser    ${URL}		Chrome
 	Maximize Browser Window
 	Search for Dummy product		${DummySearch}				#Parameter passed to the keyword
