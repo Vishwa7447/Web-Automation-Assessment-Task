@@ -1,5 +1,7 @@
 *** Keywords ***
+
 # Scenario 1 Keyword
+
 Search for Dummy product
     [Arguments]		${DummySearch}
     Input Text		${SearchIconLocator}		${DummySearch}			#Parameter passed to the keyword from testcase
@@ -7,7 +9,8 @@ Search for Dummy product
     Wait Until Page Contains		Oops! Looks like something went wrong, please try again in sometime.		10		#Validation of confirming output result
     Log to console		Product not found
 
-# Scenario 2 Keyword	
+# Scenario 2 Keyword
+
 Search for Existing product
     [Arguments]		${ExistingProductSearch}
     Input Text		${SearchIconLocator}		${ExistingProductSearch}		#Parameter passed to the keyword from testcase
@@ -16,7 +19,8 @@ Search for Existing product
     Log to console		Existing laptop products appeared on page
 	
 
-# Scenario 3rd, 4th, 5t Keywords
+# Scenario 3rd, 4th, 5th Keywords
+
 Search For Product
     [Arguments]  ${PRODUCT}				
     Input Text  ${AmazonSearchBoxLoc}  		${PRODUCT}
